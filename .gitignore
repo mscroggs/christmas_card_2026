@@ -1,0 +1,6 @@
+*.aux
+*.log
+card.pdf
+
+*.pyc
+*.pdf
