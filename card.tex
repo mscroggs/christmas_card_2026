@@ -1,0 +1,191 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage[math-style=ISO,bold-style=ISO,mathrm=sym]{unicode-math}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{xfp}
+\usepackage[top=5mm, bottom=2mm, inner=5mm, outer=5mm,
+headheight=0mm, headsep=0mm, footskip=0mm,
+papersize={210mm, 148mm},
+includeheadfoot
+]{geometry}
+\newcommand{\heading}[1]{
+\begin{center}
+\setmainfont{Raleway SemiBold}[Scale=1.3]#1
+\end{center}\vspace{-7mm}}
+\newcommand{\subheading}[1]{
+\vspace{-2mm}
+\begin{flushleft}
+\setmainfont{Raleway SemiBold}[Scale=1]#1
+\end{flushleft}\vspace{-5mm}}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[BoldItalicFont=Linux Biolinum Slanted Bold]{Libertinus Sans}
+\setmathfont[NFSSFamily=mathfont,RawFeature={+ss08}]{Libertinus Math}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+
+% Replace 0-9 with sans serif versions
+%\DeclareSymbolFont{MathFont}{TU}{mathfont}{m}{n}
+\Umathcode "31 = "0"0"1D7E3
+\Umathcode "32 = "0"0"1D7E4
+\Umathcode "33 = "0"0"1D7E5
+\Umathcode "34 = "0"0"1D7E6
+\Umathcode "35 = "0"0"1D7E7
+\Umathcode "36 = "0"0"1D7E8
+\Umathcode "37 = "0"0"1D7E9
+\Umathcode "38 = "0"0"1D7EA
+\Umathcode "39 = "0"0"1D7EB
+\Umathcode "30 = "0"0"1D7E2
+
+
+\pagestyle{empty}
+
+\newenvironment{enumerlist}[1][5mm]{\begin{enumerate}[leftmargin=#1]
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+}{\end{enumerate}}
+\begin{document}
+\noindent\begin{minipage}[t][138mm][t]{95mm}
+\heading{Definitions}
+\vspace{3mm}
+{\footnotesize
+\begin{enumerlist}[0mm]
+\item[] The \textbf{integers} are the numbers \dots, $-3$, $-2$, $-1$, $0$, $1$, $2$, $3$, \dots
+\item[] The \textbf{positive integers} are the numbers 1, 2, 3, \dots
+\end{enumerlist}
+}
+
+\vspace{2mm}
+
+\heading{Hints}
+\vspace{3mm}
+{\footnotesize
+\begin{enumerlist}[10mm]
+\item[1.] There are only a few odd numbers to add up.
+\item[2.] What is the sum of the odd integers between 0 and 2? Between 0 and 4? 0 and 6? What's the pattern?
+\item[3.] Try some numbers of baubles between 2 and 20.
+\item[4.] What would be the answer for 2 or 3 people? Or 2 or 3 or 4 people? Can you generalise?
+\item[5.] It's not too much bigger than 100.
+\item[6.] How many one-digit integers? How many two-digit integers? How many three-digit integers? {\dots} What's the most digits the number could have?
+\item[7.] If you find four numbers in a row that you can make, you could make all larger scores by adding some 4s.
+\item[8.] Try it with a few smaller numbers and look for a pattern.
+\item[9.] $10=1+2+3+4$, $11=5+6$, $12=3+4+5$. Keep going until there's one you can't do.
+\item[10.] What's special about numbers that are the sum of four consecutive integers?
+\item[11.] Try it with 3 points, 4 points, 5 points, and look for a pattern.
+\item[12.] Use your pattern from 11.
+\end{enumerlist}
+}
+
+%\heading{Solutions}
+%\vspace{3mm}
+%{\footnotesize
+%
+%}
+\vfill
+\begin{center}\footnotesize
+\includegraphics[width=.14\textwidth]{scorpion.png}
+\\
+\includegraphics[width=.75\textwidth]{logo.jpg}
+\\
+\begin{minipage}{3.5cm}
+chalkdustmagazine.com
+\\
+@chalkdustmag
+\\
+\#ChalkdustChristmasCard2026
+\end{minipage}
+\end{center}
+\end{minipage}\hspace{10mm}\begin{minipage}[t][138mm][t]{95mm}
+\vspace*{3mm}
+
+\begin{center}
+\input{drawing.tex}
+\end{center}
+
+\vfill
+\begin{center}
+{\setmainfont[Scale=3]{Pacifico}Merry Christmas}\\
+{(instructions inside)}
+\end{center}
+\vfill\null
+\end{minipage}
+
+\newpage
+
+\noindent\begin{minipage}[t][138mm][t]{95mm}
+\heading{Instructions}
+\vspace{3mm}
+{\footnotesize
+\begin{enumerlist}
+\item Solve the puzzles below.
+\item For each puzzle, take first two and last two digits of the answer.
+    Find the route through the maze from the circle containing the first pair of digits
+    to the circle containing the last pair of digits without going through any other
+    numbered circle. For example, if a puzzle's solution is 145002, then you would find
+    the route from the circle containing 14 to the circle containing 02.
+\item Colour in the route you have found in the given colour.
+\end{enumerlist}}
+
+\vspace{-1mm}
+
+\heading{Puzzles}
+{\footnotesize
+\begin{center}\footnotesize(see back of card for definitions and hints)\end{center}
+
+\vspace{-4mm}
+%1. 36
+%2. 493817284
+%3. 13
+%4. 2521
+%5. 123
+%6. 986409
+%7. 11
+%8. 1447319556779
+
+%9. 16
+%10. 1002
+%11. 153
+%12. 18224
+\subheading{Blue or green}
+\begin{enumerlist}
+\item[1.] MM -> NN
+\item[2.] MM -> OO
+\item[3.] GG -> HH
+\item[4.] NN -> OO
+\item[5.] QQ -> PP
+\item[6.] PP -> RR
+\item[7.] LL -> II
+\item[8.] KK -> II
+\item[9.] JJ -> II
+\end{enumerlist}
+
+\vspace{-1mm}
+
+%
+\subheading{Red or yellow}
+\begin{enumerlist}
+\item[10.] FF -> EE
+\item[11.] DD -> EE
+\item[12.] DD -> FF
+\item[13.] DD -> AA
+\item[14.] BB -> AA
+\item[15.] BB -> CC
+\end{enumerlist}
+}
+\end{minipage}\hspace{10mm}\begin{minipage}[t][138mm][t]{95mm}
+\vfill
+\begin{center}
+{\setmainfont[Scale=3]{Pacifico}Merry Christmas}\\
+\end{center}
+\vfill
+\begin{center}\input{footer.tex}\end{center}
+\vspace{1mm}
+\end{minipage}
+
+
+\end{document}
+
