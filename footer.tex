@@ -1,0 +1,51 @@
+
+\begin{tikzpicture}[x=7mm,y=7mm,line cap=round,line join=round,line width=1pt]
+\newcommand{\snowglobe}[1]{
+\begin{scope}
+\clip (-1.2,-0.8) rectangle (1.2,1.2);
+\begin{scope}
+\clip plot[samples=200,variable=\theta,domain=-90:270,smooth] ({cos(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)},{sin(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)});
+\draw (-1,-0.6) -- (1,-0.6) ;
+\draw[shift={({(0.68^#1-0.6^#1)^(1/#1)},-0.6)}] (-0.25,0) -- (-0.25,0.5) -- (0.25,0.5) -- (0.25,0) (0.25,0.5) -- (0,0.84) -- (-0.25,0.5) (0.05,0) -- (0.05,0.2) -- (0.15,0.2) -- (0.15,0);
+\foreach \r/\theta in {0.6/80,0.4/230,0.7/190,0.2/100,0.8/60,0.7/130}
+    \draw[shift={({\r*cos(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)},{\r*sin(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)})},scale=0.05]
+        plot[samples=100,variable=\theta,domain=-90:270,smooth] ({cos(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)},{sin(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)});
+\end{scope}
+\draw plot[samples=200,variable=\theta,domain=-90:270,smooth] ({cos(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)},{sin(\theta) / (abs(sin(\theta))^#1+abs(cos(\theta))^#1)^(1/#1)});
+\end{scope}
+\draw ({(1-0.8^#1)^(1/#1)},-0.8) -- ({(1-0.8^#1)^(1/#1)+0.05},-1) -- ({-(1-0.8^#1)^(1/#1)-0.05},-1) -- ({-(1-0.8^#1)^(1/#1)},-0.8) -- cycle;
+}
+\begin{scope}[shift={(0,0)}]
+\snowglobe{1}
+\end{scope}
+\begin{scope}[shift={(2.5,0)}]
+\snowglobe{2}
+\end{scope}
+\begin{scope}[shift={(5,0)}]
+\snowglobe{3}
+\end{scope}
+\begin{scope}[shift={(7.5,0)}]
+\snowglobe{4}
+\end{scope}
+\begin{scope}[shift={(9.15,0)}]
+\fill (-0.2,-0.2) circle (0.05);
+\fill (0,-0.2) circle (0.05);
+\fill (0.2,-0.2) circle (0.05);
+\end{scope}
+
+\begin{scope}[shift={(10.8,0)}]
+\begin{scope}
+\clip (-1.2,-0.8) rectangle (1.2,1.2);
+\begin{scope}
+\clip (-1,-1) rectangle (1,1);
+\draw (-1,-0.6) -- (1,-0.6) ;
+\draw[shift={(0.68,-0.6)}] (-0.25,0) -- (-0.25,0.5) -- (0.25,0.5) -- (0.25,0) (0.25,0.5) -- (0,0.84) -- (-0.25,0.5) (0.05,0) -- (0.05,0.2) -- (0.15,0.2) -- (0.15,0);
+\foreach \r/\theta in {0.6/80,0.4/230,0.7/190,0.2/100,0.8/60,0.7/130}
+    \draw[shift={({\r*cos(\theta) / max(abs(sin(\theta)),abs(cos(\theta)))},{\r*sin(\theta) / max(abs(sin(\theta)),abs(cos(\theta)))})},scale=0.05]
+        (-1,-1) rectangle (1,1);
+\end{scope}
+\draw (-1,-1) rectangle (1,1);
+\end{scope}
+\draw (1,-0.8) -- (1.05,-1) -- (-1.05,-1) -- (-1,-0.8) -- cycle;
+\end{scope}
+\end{tikzpicture}
