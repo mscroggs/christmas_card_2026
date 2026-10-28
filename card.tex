@@ -54,40 +54,101 @@ includeheadfoot
 \vspace{3mm}
 {\footnotesize
 \begin{enumerlist}[0mm]
-\item[] The \textbf{integers} are the numbers \dots, $-3$, $-2$, $-1$, $0$, $1$, $2$, $3$, \dots
 \item[] The \textbf{positive integers} are the numbers 1, 2, 3, \dots
-\item[] \textbf{higher numbered} => !=
 \end{enumerlist}
 }
 
-\vspace{2mm}
+\vspace{-2mm}
 
 \heading{Hints}
 \vspace{3mm}
 {\footnotesize
 \begin{enumerlist}[10mm]
-\item[1.] TODO
+\item[1.] How many are there less than $10^3$? Less than $10^4$? What's the pattern?
+\item[2.] How many are there less than $10^3$? Less than $10^4$? Try comparing these with question 1.
+\item[3.] How many ways are there if there were 3 boxes? 4 boxes? What's the pattern?
+\item[4.] How many ways are there if there are no balls in boxes 1 and 2? How many ways are there if there are some balls in boxes 1 and 2?
+\item[5.] These are the ways for a $2\times3$ rectangle:
+\begin{center}
+\begin{tikzpicture}[line width=1pt,x=4mm,y=4mm]
+\begin{scope}
+\foreach \x in {0,...,3} \draw (\x,0) -- +(0,2);
+\foreach \y in {0,...,2} \draw (0,\y) -- +(3,0);
+\draw[rounded corners=1mm,fill=white] (0.2,0.2) rectangle +(0.6,1.6);
+\draw[rounded corners=1mm,fill=white] (1.2,0.2) rectangle +(0.6,1.6);
+\draw[rounded corners=1mm,fill=white] (2.2,0.2) rectangle +(0.6,1.6);
+\end{scope}
+\begin{scope}[shift={(4,0)}]
+\foreach \x in {0,...,3} \draw (\x,0) -- +(0,2);
+\foreach \y in {0,...,2} \draw (0,\y) -- +(3,0);
+\draw[rounded corners=1mm,fill=white] (0.2,0.2) rectangle +(0.6,1.6);
+\draw[rounded corners=1mm,fill=white] (1.2,0.2) rectangle +(1.6,0.6);
+\draw[rounded corners=1mm,fill=white] (1.2,1.2) rectangle +(1.6,0.6);
+\end{scope}
+\begin{scope}[shift={(8,0)}]
+\foreach \x in {0,...,3} \draw (\x,0) -- +(0,2);
+\foreach \y in {0,...,2} \draw (0,\y) -- +(3,0);
+\draw[rounded corners=1mm,fill=white] (0.2,0.2) rectangle +(1.6,0.6);
+\draw[rounded corners=1mm,fill=white] (0.2,1.2) rectangle +(1.6,0.6);
+\draw[rounded corners=1mm,fill=white] (2.2,0.2) rectangle +(0.6,1.6);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+How many ways are there for a $2\times4$ rectangle? $2\times5$? Can you generalise?
+\item[6.] These are the ways for a $3\times4$ rectangle:
+\begin{center}
+\begin{tikzpicture}[line width=1pt,x=4mm,y=4mm]
+\begin{scope}
+\foreach \x in {0,...,4} \draw (\x,0) -- +(0,3);
+\foreach \y in {0,...,3} \draw (0,\y) -- +(4,0);
+\draw[rounded corners=1mm,fill=white] (0.2,0.2) rectangle +(0.6,2.6);
+\draw[rounded corners=1mm,fill=white] (1.2,0.2) rectangle +(0.6,2.6);
+\draw[rounded corners=1mm,fill=white] (2.2,0.2) rectangle +(0.6,2.6);
+\draw[rounded corners=1mm,fill=white] (3.2,0.2) rectangle +(0.6,2.6);
+\end{scope}
+\begin{scope}[shift={(5,0)}]
+\foreach \x in {0,...,4} \draw (\x,0) -- +(0,3);
+\foreach \y in {0,...,3} \draw (0,\y) -- +(4,0);
+\draw[rounded corners=1mm,fill=white] (0.2,0.2) rectangle +(0.6,2.6);
+\draw[rounded corners=1mm,fill=white] (1.2,0.2) rectangle +(2.6,0.6);
+\draw[rounded corners=1mm,fill=white] (1.2,1.2) rectangle +(2.6,0.6);
+\draw[rounded corners=1mm,fill=white] (1.2,2.2) rectangle +(2.6,0.6);
+\end{scope}
+\begin{scope}[shift={(10,0)}]
+\foreach \x in {0,...,4} \draw (\x,0) -- +(0,3);
+\foreach \y in {0,...,3} \draw (0,\y) -- +(4,0);
+\draw[rounded corners=1mm,fill=white] (0.2,0.2) rectangle +(2.6,0.6);
+\draw[rounded corners=1mm,fill=white] (0.2,1.2) rectangle +(2.6,0.6);
+\draw[rounded corners=1mm,fill=white] (0.2,2.2) rectangle +(2.6,0.6);
+\draw[rounded corners=1mm,fill=white] (2.2,0.2) rectangle +(0.6,2.6);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+How many ways are there for a $3\times5$ rectangle? $3\times6$? Can you generalise?
+\item[7.] Draw the first few rows. What do you add to get from a row to the next?
+\item[8.] Draw the first few rows. What do you notice about the largest number in each row?
+\item[9.] What is the most likely result with 2 dice? With 4 dice? 6 dice? Is there the pattern?
+\item[10.] Which numbers are equally likely with 2 dice? With 4 dice? Is there a pattern?
 \end{enumerlist}
 }
 
-%\heading{Solutions}
-%\vspace{3mm}
-%{\footnotesize
-%
-%}
+\vspace{-10mm}
+
 \vfill
+
+
 \begin{center}\footnotesize
 \includegraphics[width=.14\textwidth]{scorpion.png}
 \\
 \includegraphics[width=.75\textwidth]{logo.jpg}
-\\
-\begin{minipage}{3.5cm}
+\\[-5mm]
+\null\hfill
 chalkdustmagazine.com
-\\
+\hfill
 @chalkdustmag
-\\
+\hfill
 \#ChalkdustChristmasCard2026
-\end{minipage}
+\hfill\null
 \end{center}
 \end{minipage}\hspace{10mm}\begin{minipage}[t][138mm][t]{95mm}
 \vspace*{3mm}
