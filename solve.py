@@ -17,8 +17,8 @@ print(count)
 
 # 3
 count = 0
-for tennis in range(1, 77):
-    for cricket in range(1, 77):
+for tennis in range(1, 533):
+    for cricket in range(1, 533):
         if tennis > cricket:
             count += 1
 print(count)
@@ -51,7 +51,7 @@ def three_tilings(n):
         return ["||"]
     return ["|" + i for i in three_tilings(n - 1)] + ["===" + i for i in three_tilings(n - 3)]
 
-print(len(three_tilings(35)))
+print(len(three_tilings(20)))
 
 # 7
 row = [1]
